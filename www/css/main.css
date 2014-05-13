@@ -208,31 +208,61 @@ img {
     left: 17px;
     top: 25px;
     z-index: 2;
+
+	
 }
 #description {
     left: 259px;
     top: 67px;
     z-index: 1;
+
+	
+
 }
 #date {
     left: 525px;
     top: 9px;
+
+	
 }
 
-#invitation {
+#side {
+    right: 0px;
+    top: 9px;
+t;
+	
+}
+
+#bottom {
+    left: 725px;
+    bottom: 0px;
+
+}
+
+.invitation {
     background-color: #fff;
-    bottom: 0;
+    bottom: -371px;
     left: 0;
     padding: 27px 129px 29px 29px;
     position: absolute;
     width: 579px;
     z-index: 3;
 }
-#invitation h1 {
+.invitation h1 {
     font-size: 30px;
     margin-bottom: 15px;
 }
-#invitation a {
+/* add list style*/
+.invitation ul{
+	list-style:none;
+	padding:0;	
+}
+
+.invitation li{
+display:inline
+}
+
+.invitation a {
     background-color: #393939;
     color: #fff;
     border-radius: 3px;
@@ -242,9 +272,147 @@ img {
     text-align: center;
     text-decoration: none;
 }
-#invitation a:hover {
+
+/* RSVP RESPONSE OVERLAY */
+
+.rsvp-yes{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	color:#000;
+	background:rgba(0,0,0,0.5);
+	z-index:10;
+	display:none;
+}
+
+.rsvp-no{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	color:#000;
+	background:rgba(0,0,0,0.5);
+	z-index:10;
+	display:none;
+}
+
+.rsvp-content{
+	width:737px;
+	height:306px;
+	margin-right:auto;
+	margin-left:auto;
+	margin-top:100px;
+	background-color:#fff;
+	z-index:11;
+	padding:0 0 0 25px;
+	
+}
+
+#subscribe{
+	width:179px;
+    background-color: #393939;
+    color: #fff;
+    border-radius: 3px;
+    display: inline-block;
+    margin: 10px 20px 0 0;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+#polaroid{
+	position:relative;
+	top:-15px;
+	left:370px;
+	width:100%;
+	
+}
+
+#rsvp-img{
+	box-shadow: 2px 2px 5px 0px rgba(50, 50, 50, 0.75);
+}
+
+#add-to-calender{
+	position:relative;
+	top:10px;
+	left:30px;
+}
+
+
+#close-button-yes{
+	position:relative;
+	top:0;
+	left:647px;
+	width:90px;
+	height:25px;
+	text-align:center;
+	color:#fff;
+	background-color:#393939;
+	z-index:12;
+	cursor:pointer;
+}
+
+#close-button-no{
+	position:relative;
+	top:0;
+	left:647px;
+	width:90px;
+	height:25px;
+	text-align:center;
+	color:#fff;
+	background-color:#393939;
+	z-index:12;
+	cursor:pointer;
+}
+
+#close-button-yes:hover {
     background-color: #f78b36;
 }
+
+#close-button-no:hover {
+    background-color: #f78b36;
+}
+
+.addthisevent-drop:hover{
+    background-color: #CCC;
+}
+
+#subscribe:hover{
+    background-color: #f78b36;	
+}
+
+/*UNIVERSAL HOVER */
+
+a:hover {
+    background-color: #f78b36;
+}
+
+
+/*WEBKIT ANIMATIONS FOR POLAROIDS */
+
+.polar-anime{
+	-webkit-animation: pulsate .5s ease-in-out;
+	-moz-animation: pulsate .5s ease-in-out;	
+	
+}
+
+@-webkit-keyframes pulsate {
+    0% {-webkit-transform: scale(0.0, 0.0); opacity: 0.0;}
+    50% {-webkit-transform: scale(1.1, 1.1); opacity: 0.2;}
+    100% {-webkit-transform: scale(1.0, 1.0); opacity: 1.0;}
+}
+
+@-moz-keyframes pulsate {
+    0% {-webkit-transform: scale(0.0, 0.0); opacity: 0.0;}
+    50% {-webkit-transform: scale(1.1, 1.1); opacity: 0.2;}
+    100% {-webkit-transform: scale(1.0, 1.0); opacity: 1.0;}
+}
+
+
 
 
 /* ==========================================================================
@@ -252,6 +420,15 @@ img {
    Theses examples override the primary ('mobile fimage-replacest') styles.
    Modify as content requimage-replacees.
    ========================================================================== */
+
+@media only screen and (max-width: 850px) {
+
+#side {
+	   display:none;
+}
+
+}
+
 
 @media only screen and (min-width: 35em) {
     /* Style adjustments for viewports that meet the condition */

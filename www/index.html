@@ -17,25 +17,107 @@
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
+<!--ADD FB ROOT DIV-->
+		<div id="fb-root"></div>
+		
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
+ 
 
-        <div id="details">
-            <img id="title" src="img/card-title.jpg" alt="MDC Partners - Polaroid Celebration" />
-            <img id="description" src="img/card-description.jpg" alt="Instant - The Story of Polaroid" />
-            <img id="date" src="img/card-date.jpg" alt="October 30th - The MDC Innovation Centre, 745 5th Ave., 19th Floor" />
-        </div>
-        <div id="invitation">
+<!-- IMPROVE SYMANTECS BY CHANGING DIVS TO SECTION AND FOOTER
+ALSO CHANGE SECTION AND FOOTER IDS TO CLASSES-->
+		
+<!--RSVP YES SECTION WINDOW POPUP-->
+		<section class="rsvp-yes">
+			<div class="rsvp-content">
+			<div id="close-button-yes">CLOSE</div>
+			
+<!--ADD POLAROID ART WITH CSS TRANSFORM ANIMATION-->
+			<div id="polaroid">
+			<img class="polar-anime" id="rsvp-img" src="img/rsvp-img.jpg" alt="MDC Partners - Polaroid Celebration" />
+			</div>
+			<h1>Yes I will be attending.</h1>
+			<ul>
+			<li>October 30th 2014</li>
+			<li>745 Fifth Avenue, 19th Floor</li>
+			</ul>
+			
+<!--ADD ADD TO CALENDAR WIDGET-->
+			<div id="add-to-calender">
+			<a href="http://example.com/link-to-your-event" title="Add to Calendar" class="addthisevent">
+			Add to Calendar
+			<span class="_start">10-05-2014 11:38:46</span>
+			<span class="_end">11-05-2014 11:38:46</span>
+			<span class="_zonecode">35</span>
+			<span class="_summary">Summary of the event</span>
+			<span class="_description">Description of the event</span>
+			<span class="_location">Location of the event</span>
+			<span class="_organizer">Organizer</span>
+			<span class="_organizer_email">Organizer e-mail</span>
+			<span class="_facebook_event">http://www.facebook.com/events/160427380695693</span>
+			<span class="_all_day_event">true</span>
+			<span class="_date_format">DD/MM/YYYY</span>
+			</a>
+			</div>
+			</div>
+		</section>
+<!--END RSVP YES SECTION WINDOW POPUP-->
+
+<!--RSVP NO SECTION WINDOW POPUP-->
+			<section class="rsvp-no">
+			<div class="rsvp-content">
+			<div id="close-button-no">CLOSE</div>
+
+<!--ADD POLAROID ART WITH CSS TRANSFORM ANIMATION-->
+			<div id="polaroid">
+			<img class="polar-anime" id="rsvp-img" src="img/rsvp-img.jpg" alt="MDC Partners - Polaroid Celebration" />
+			</div>
+	        <h1>No not attending.</h1>
+			<h2>Subscribe for future events</h2>
+			
+<!--ADD FORM TO SUBSCRIBE FOR FUTURE EVENTS-->
+			<form name="subscribe" action="?" onsubmit="return validateForm()" method="post">
+			Email Address<br /> <input type="text" name="fname"><br />
+			<input id="subscribe" type="submit" value="SUBSCRIBE">
+			</form>
+			</div>
+			</section>
+<!--END RSVP NO SECTION WINDOW POPUP-->
+		
+
+<!--DETAILS ART SECTION-->
+        	<section class="details">
+            <img class="polar-anime" id="title" src="img/card-title.jpg" alt="MDC Partners - Polaroid Celebration" />
+            <img class="polar-anime" id="description" src="img/card-description.jpg" alt="Instant - The Story of Polaroid" />
+            <img class="polar-anime" id="date" src="img/card-date.jpg" alt="October 30th - The MDC Innovation Centre, 745 5th Ave., 19th Floor" />
+<!--ADD ADDITIONAL ART FROM PSD-->
+			<img class="polar-anime" id="side" src="img/card-side.png" alt="MDC Partners - Polaroid Celebration" />
+			<img class="polar-anime" id="bottom" src="img/card-bottom.png" alt="MDC Partners - Polaroid Celebration" />
+        	</section>
+<!--END DETAILS ART SECTION-->
+
+<!--FOOTER-->
+       		<footer class="invitation">
             <h1>Stop by for a minute.</h1>
-            <p>Celebrate one of the most influential products of our time that for 60 years did what no other invention could do. Learn about the man behind the camera who influenced the likes of Steve Jobs and Instagram &amp; expose yourself to instant gratification by snapping a few candid shots of your own.</p>
-            <a href="#">YES, I'M COMING</a>
-            <a href="#">NO, NOT THIS TIME</a>
-        </div>
+            <p>Celebrate one of the most influential products of our time that for 60 years did what no other invention could do. Learn about the man 		behind the camera who influenced the likes of Steve Jobs and Instagram &amp; expose yourself to instant gratification by snapping a few candid shots of your own.</p>
+<!--PUT BUTTONS IN UL-->
+			<ul>
+            <li class="nav-yes"><a href="#">YES, I'M COMING</a></li>
+            <li class="nav-no"><a href="#">NO, NOT THIS TIME</a></li>
+			</ul>
+
+<!--ADD FACEBOOK BUTTON-->
+			<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="standard" data-action="recommend" data-show-faces="true" data-share="true"></div>
+        	</footer>
+<!--END FOOTER-->
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+
+<!--SCRIPT FOR ADD THIS EVENT WIDGET FOR RSVP YES POPUP-->
+		<script type="text/javascript" src="http://js.addthisevent.com/atemay.js"></script>
     </body>
 </html>
